@@ -6,7 +6,9 @@ int main(int argc, char *argv[]) {
     } else if (argc == 2) {
         printf("Hello, %s!\n", argv[1]);
     } else {
-        fprintf(stderr, "Error: Too many arguments!\n");
+        for (int i = 1; i < argc; i++) {
+            printf("Hello, %s!\n", argv[i]);
+        }
     }
     return 0;
 }
